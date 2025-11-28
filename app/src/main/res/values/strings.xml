@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">UI Optimization Demo</string>
+    <string name="switch_mode">Đổi chế độ</string>
+    <string name="show_stats">Xem thống kê</string>
+    <string name="animation_demo">Demo Animation</string>
+    <string name="image_demo">Demo Image</string>
+
+    <string name="mode_unoptimized">Chế độ: Trước tối ưu</string>
+    <string name="mode_optimized">Chế độ: Sau tối ưu</string>
+    <string name="metrics_placeholder">Chưa đo hiệu năng.</string>
+    <string name="metrics_format">%1$s – Thời gian dựng UI: %2$s ms</string>
+
+    <string name="anim_info_text">
+        Demo so sánh giữa animation chưa tối ưu (nhiều view, tạo Animation object cũ kiểu TranslateAnimation) và animation đã tối ưu (ít view hơn, dùng ViewPropertyAnimator).
+    </string>
+
+    <string name="image_info_text">
+        Demo so sánh decode ảnh chưa tối ưu (decode full size) và decode có tối ưu (dùng inSampleSize để giảm kích thước bitmap theo kích thước ImageView).
+    </string>
+
+    <string name="image_result_format">
+        Thời gian decode chưa tối ưu: %1$s ms\nThời gian decode đã tối ưu: %2$s ms
+    </string>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_item_unoptimized"
+    android:padding="8dp">
+
+    <!-- layer 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#EEEEEE"
+        android:padding="8dp">
+
+        <!-- layer 2 - text -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#DDDDDD"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtitle"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- layer 3 - detail luôn inflate, nặng -->
+        <LinearLayout
+            android:id="@+id/layoutDetailAlways"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#CCCCCC"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tvDetail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail 1" />
+
+            <TextView
+                android:id="@+id/tvDetail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail 2" />
+
+            <TextView
+                android:id="@+id/tvDetail3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail 3" />
+
+            <ImageView
+                android:id="@+id/imgDetailIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_detail_icon" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

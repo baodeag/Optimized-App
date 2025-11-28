@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutDetailLazy"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#DDDDDD"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/tvDetail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail 1 (lazy)" />
+
+    <TextView
+        android:id="@+id/tvDetail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail 2 (lazy)" />
+
+    <TextView
+        android:id="@+id/tvDetail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail 3 (lazy)" />
+
+    <ImageView
+        android:id="@+id/imgDetailIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_detail_icon" />
+</LinearLayout>

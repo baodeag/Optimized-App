@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Dòng hiển thị chế độ hiện tại -->
+    <TextView
+        android:id="@+id/tvMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mode_unoptimized"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Nút đổi chế độ trước/sau tối ưu layout -->
+    <Button
+        android:id="@+id/btnToggleMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_mode"
+        android:layout_marginTop="8dp" />
+
+    <!-- Nút xem thống kê & biểu đồ -->
+    <Button
+        android:id="@+id/btnShowStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_stats"
+        android:layout_marginTop="8dp" />
+
+    <!-- 🔥 Nút mở demo Animation -->
+    <Button
+        android:id="@+id/btnAnimationDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/animation_demo"
+        android:layout_marginTop="8dp" />
+
+    <!-- 🔥 Nút mở demo Image -->
+    <Button
+        android:id="@+id/btnImageDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/image_demo"
+        android:layout_marginTop="8dp" />
+
+    <!-- Text hiển thị kết quả lần đo gần nhất -->
+    <TextView
+        android:id="@+id/tvMetrics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/metrics_placeholder"
+        android:layout_marginTop="8dp" />
+
+    <!-- RecyclerView chiếm phần còn lại -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>
