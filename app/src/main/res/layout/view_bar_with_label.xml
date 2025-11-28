@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@+id/barView"
+        android:layout_width="40dp"
+        android:layout_height="10dp"
+        android:background="@drawable/bg_bar_before" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Label"
+        android:textSize="12sp" />
+
+</merge>

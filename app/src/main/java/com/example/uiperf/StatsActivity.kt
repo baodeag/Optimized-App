@@ -18,10 +18,21 @@ class StatsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_stats)
 
         tvSummary = findViewById(R.id.tvSummary)
-        barBefore = findViewById(R.id.barBefore)
-        barAfter = findViewById(R.id.barAfter)
-        tvBeforeLabel = findViewById(R.id.tvBeforeLabel)
-        tvAfterLabel = findViewById(R.id.tvAfterLabel)
+
+        // Lấy group trước / sau
+        val groupBefore: View = findViewById(R.id.groupBefore)
+        val groupAfter: View = findViewById(R.id.groupAfter)
+
+        // Bên trong mỗi group, layout view_bar_with_label.xml đã được include (root là <merge>)
+        barBefore = groupBefore.findViewById(R.id.barView)
+        tvBeforeLabel = groupBefore.findViewById(R.id.tvLabel)
+
+        barAfter = groupAfter.findViewById(R.id.barView)
+        tvAfterLabel = groupAfter.findViewById(R.id.tvLabel)
+
+        // Đổi background cho cột SAU để nhìn khác cột TRƯỚC
+        barBefore.setBackgroundResource(R.drawable.bg_bar_before)
+        barAfter.setBackgroundResource(R.drawable.bg_bar_after)
 
         val countBefore = intent.getIntExtra("countBefore", 0)
         val countAfter = intent.getIntExtra("countAfter", 0)

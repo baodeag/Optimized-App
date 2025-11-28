@@ -27,48 +27,30 @@
         android:gravity="bottom|center_horizontal"
         android:layout_marginTop="16dp">
 
+        <!-- Cột TRƯỚC: include với background before -->
         <LinearLayout
+            android:id="@+id/groupBefore"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_horizontal|bottom"
             android:orientation="vertical">
 
-            <View
-                android:id="@+id/barBefore"
-                android:layout_width="40dp"
-                android:layout_height="10dp"
-                android:background="@drawable/bg_bar_before" />
-
-            <TextView
-                android:id="@+id/tvBeforeLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Trước"
-                android:textSize="12sp" />
+            <include
+                layout="@layout/view_bar_with_label" />
         </LinearLayout>
 
+        <!-- Cột SAU: include lần 2, dùng lại layout nhưng sẽ đổi background trong code -->
         <LinearLayout
+            android:id="@+id/groupAfter"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_horizontal|bottom"
             android:orientation="vertical">
 
-            <View
-                android:id="@+id/barAfter"
-                android:layout_width="40dp"
-                android:layout_height="10dp"
-                android:background="@drawable/bg_bar_after" />
-
-            <TextView
-                android:id="@+id/tvAfterLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Sau"
-                android:textSize="12sp" />
+            <include
+                layout="@layout/view_bar_with_label" />
         </LinearLayout>
 
     </LinearLayout>
