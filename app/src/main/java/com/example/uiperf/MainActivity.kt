@@ -45,7 +45,18 @@ class MainActivity : AppCompatActivity() {
         tvMode = findViewById(R.id.tvMode)
         tvMetrics = findViewById(R.id.tvMetrics)
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        // LayoutManager với prefetch
+        val layoutManager = LinearLayoutManager(this).apply {
+            // Prefetch một số item sắp tới để scroll mượt hơn
+            initialPrefetchItemCount = 10
+        }
+        recyclerView.layoutManager = layoutManager
+
+        // RecyclerView tối ưu hơn nếu size không đổi
+        recyclerView.setHasFixedSize(true)
+
+        // Giữ cache sẵn một số ViewHolder đã bind
+        recyclerView.setItemViewCacheSize(20)
 
         // đổi chế độ trước/sau tối ưu layout
         btnToggleMode.setOnClickListener {
