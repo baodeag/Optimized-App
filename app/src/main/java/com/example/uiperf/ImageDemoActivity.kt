@@ -91,7 +91,7 @@ class ImageDemoActivity : AppCompatActivity() {
                 bmpOpt = decodeSampledBitmapFromResource(
                     resources,
                     resId,
-                    inSampleSize = SAMPLE_SIZE
+                    inSampleSize = SAMPLE_SIZE //sample_size=8
                 )
                 cache.put(resId, bmpOpt)
             }
